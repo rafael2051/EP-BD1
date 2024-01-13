@@ -3,20 +3,25 @@ package com.tuspeliculasfavoritas.app.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
 
 @Entity
+@IdClass(ArtistaIndicadoId.class)
 public class ArtistaIndicado {
 
     @Id
     @Column(name = "nomeArtistico", length = 55)
     private String nomeArtistico;
 
+    @Id
     @Column(name = "nome_premio", length = 55)
     private String nomePremio;
 
+    @Id
     @Column(name = "nome_evento", length = 20)
     private String nomeEvento;
 
+    @Id
     @Column(name = "ano_edicao")
     private Integer anoEdicao;
 
